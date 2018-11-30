@@ -1,0 +1,25 @@
+{
+  "name": "es6-helloworld",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tt": "babel src/index.js -o dist/index.js",
+    "t2": "babel src/index.js -o dist/index.js -s"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gcht/es6-helloworld.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gcht/es6-helloworld/issues"
+  },
+  "homepage": "https://github.com/gcht/es6-helloworld#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1"
+  }
+}
