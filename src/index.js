@@ -66,3 +66,70 @@ console.log(poodleDog.speed);
 poodleDog.shout();
 poodleDog.run()
 poodleDog.gnawBone();
+
+
+/////////////////////////////////////////////////////////////
+class Cat { 
+    constructor(id) {
+      this._id = id;
+    }
+    
+    speak() {
+      console.log(this._id + ' makes a noise.');
+    }
+
+    getId(){
+        return this._id;
+    }
+}
+  
+class Lion extends Cat {
+    constructor(id, name){    
+        super(id);
+        this._name = name;
+    }
+
+    speak() {
+      super.speak();
+      console.log(this._name + ' roars.');
+    }
+
+    getId(){
+        let ret = this._name + " 's id is " + super.getId();
+        return ret;
+    }
+}
+debugger;
+  let lioncat = new Lion('20181203', 'Jack');
+  lioncat.speak();
+  console.log(lioncat.getId());
+
+
+
+
+  //////////////////////////////////////////////////////////
+class XXX {
+    constructor(id){
+      this._id = id;
+    }
+    
+    getId(){
+        return this._id;
+    }
+  
+}
+  
+class YYY extends XXX{
+    constructor(id, name){    
+        super(id);
+        this._name = name;
+    }
+    
+    getName(){
+        return this._name + " 's id is " + super.getId();
+    }
+  }
+  
+  debugger;
+  let ccc = new YYY('button0', '用友按钮');
+  console.log(ccc.getName());

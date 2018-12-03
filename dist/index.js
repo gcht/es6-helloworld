@@ -123,4 +123,107 @@ poodleDog.shout();
 poodleDog.run();
 poodleDog.gnawBone();
 
+/////////////////////////////////////////////////////////////
+
+var Cat = function () {
+    function Cat(id) {
+        _classCallCheck(this, Cat);
+
+        this._id = id;
+    }
+
+    _createClass(Cat, [{
+        key: 'speak',
+        value: function speak() {
+            console.log(this._id + ' makes a noise.');
+        }
+    }, {
+        key: 'getId',
+        value: function getId() {
+            return this._id;
+        }
+    }]);
+
+    return Cat;
+}();
+
+var Lion = function (_Cat) {
+    _inherits(Lion, _Cat);
+
+    function Lion(id, name) {
+        _classCallCheck(this, Lion);
+
+        var _this3 = _possibleConstructorReturn(this, (Lion.__proto__ || Object.getPrototypeOf(Lion)).call(this, id));
+
+        _this3._name = name;
+        return _this3;
+    }
+
+    _createClass(Lion, [{
+        key: 'speak',
+        value: function speak() {
+            _get(Lion.prototype.__proto__ || Object.getPrototypeOf(Lion.prototype), 'speak', this).call(this);
+            console.log(this._name + ' roars.');
+        }
+    }, {
+        key: 'getId',
+        value: function getId() {
+            var ret = this._name + " 's id is " + _get(Lion.prototype.__proto__ || Object.getPrototypeOf(Lion.prototype), 'getId', this).call(this);
+            return ret;
+        }
+    }]);
+
+    return Lion;
+}(Cat);
+
+debugger;
+var lioncat = new Lion('20181203', 'Jack');
+lioncat.speak();
+console.log(lioncat.getId());
+
+//////////////////////////////////////////////////////////
+
+var XXX = function () {
+    function XXX(id) {
+        _classCallCheck(this, XXX);
+
+        this._id = id;
+    }
+
+    _createClass(XXX, [{
+        key: 'getId',
+        value: function getId() {
+            return this._id;
+        }
+    }]);
+
+    return XXX;
+}();
+
+var YYY = function (_XXX) {
+    _inherits(YYY, _XXX);
+
+    function YYY(id, name) {
+        _classCallCheck(this, YYY);
+
+        var _this4 = _possibleConstructorReturn(this, (YYY.__proto__ || Object.getPrototypeOf(YYY)).call(this, id));
+
+        _this4._name = name;
+        return _this4;
+    }
+
+    _createClass(YYY, [{
+        key: 'getName',
+        value: function getName() {
+            return this._name + " 's id is " + _get(YYY.prototype.__proto__ || Object.getPrototypeOf(YYY.prototype), 'getId', this).call(this);
+        }
+    }]);
+
+    return YYY;
+}(XXX);
+
+debugger;
+var ccc = new YYY('button0', '用友按钮');
+console.log(ccc.getName());
+
 //# sourceMappingURL=index.js.map
